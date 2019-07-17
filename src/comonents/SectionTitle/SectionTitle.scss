@@ -1,0 +1,22 @@
+.sectionTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #0f071c;
+
+    &--div {
+        padding: 20px 0;
+    }
+    
+    &--title {
+        font-size: 3em;
+        
+    }
+
+    &--text {
+        word-break: break-all;
+        margin: 0 auto;
+        max-width: 80%;
+    }
+}
