@@ -9,7 +9,7 @@ import Footer from './components/Footer/Footer';
 function App () {
     return (
       	<div className="App">
-        	  <Home slogan='Home' text='Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, assumenda!'/>
+        	<Home/>
             {/* <div style = { { backgroundColor: 'red', height: '800px'} }></div> */}
             <Portfolio />
             <Services />
