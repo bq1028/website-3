@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
-import Typography from '@material-ui/core/Typography';
+// import Typography from '@material-ui/core/Typography';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import MoreIcon from '@material-ui/icons/MoreVert';
@@ -13,12 +13,6 @@ import './Navbar.scss';
 const useStyles = makeStyles(theme => ({
     grow: {
         flexGrow: 1
-    },
-    title: {
-        display: 'none',
-        [theme.breakpoints.up('sm')]: {
-            display: 'block'
-        }
     },
     sectionDesktop: {
         display: 'none',
@@ -78,7 +72,7 @@ export default function PrimarySearchAppBar () {
         >   
             {data.map(item => {
                 return <MenuItem key = {item.id}>
-                    <a className="hiddenItems" href = {`#${item.id}`}>{item.title}</a>
+                    <a className="hiddenItems" onClick = {handleMobileMenuClose} href = {`#${item.id}`}>{item.title}</a>
                 </MenuItem>;
             })}
         </Menu>
@@ -87,12 +81,12 @@ export default function PrimarySearchAppBar () {
         <div className={`navigation ${classes.grow}`}>
             <AppBar position="static">
                 <Toolbar>
-                    <a className={classes.title} href="#home">
-                        <img src='./VanIT.png' alt='aaaaa' style = { { width: '35px', height: '35px', borderRadius: '50%' } }></img>
+                    <a href="#home">
+                        <img src='./VanIT.png' alt='aaaaa' style = { { width: '80px', height: '50px' } }></img>
                     </a>
-                    <Typography className={classes.title} variant="h6" noWrap>
+                    {/* <Typography className={classes.title} variant="h6" noWrap>
                         VanIT
-                    </Typography>
+                    </Typography> */}
                     <div className={classes.grow} />
                     <div className={classes.sectionDesktop}>
                         {data.map(item => {

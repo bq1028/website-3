@@ -1,22 +1,21 @@
 .sectionTitle {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     text-align: center;
-    background-color: #0f071c;
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 15px;
 
-    &--div {
-        padding: 20px 0;
-    }
-    
-    &--title {
-        font-size: 3em;
-        
+    h1{
+        font-size: 2.5em;
     }
 
-    &--text {
-        word-break: break-all;
+    div {
+        height: 2px;
+        width: 50%;
+        background-color: white;
         margin: 0 auto;
-        max-width: 80%;
+    }    
+
+    p{
+        line-height: 30px;
     }
 }

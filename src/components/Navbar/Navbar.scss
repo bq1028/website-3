@@ -1,6 +1,7 @@
 .navigation{
     position: fixed;
     width: 100%;
+    z-index: 99;
 
     a{
         color: white;
@@ -11,13 +12,28 @@
         font-weight: 900;
 
         &:hover{
-            color: yellow;
+            color: #484848;
         }
     }
+}
+
+.mobileMenu{
+    z-index: 100;
+}
+
+.MuiAppBar-colorPrimary{
+    background-color: transparent!important;
+}
+
+.MuiListItem-gutters{
+    padding: 0!important;
+    min-height: max-content!important;
 }
 
 .hiddenItems {
     color: steelblue;
     text-decoration: none;
-    font-size: 17 px;
+    width: 100%;
+    padding: 10px 16px;
+    font-size: 17 px!important;
 }
