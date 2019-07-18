@@ -6,11 +6,10 @@ import './Home.scss';
 
 class Home extends Component {
     render () {
-        const { id } = this.props;
         return (
             <>
             <PrimarySearchAppBar />
-            <Grid container className="home" id = {id}>
+            <Grid container className="home" id = 'home'>
                 <Grid item xs={12} className='home--slogan'>
                     <div>
                         <h1>{this.props.slogan}</h1>

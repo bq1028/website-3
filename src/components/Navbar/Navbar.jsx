@@ -87,18 +87,16 @@ export default function PrimarySearchAppBar () {
         <div className={`navigation ${classes.grow}`}>
             <AppBar position="static">
                 <Toolbar>
-                    <Typography className={classes.title} variant="h6" noWrap>
+                    <a className={classes.title} href="#home">
                         <img src='./VanIT.png' alt='aaaaa' style = { { width: '35px', height: '35px', borderRadius: '50%' } }></img>
-                    </Typography>
+                    </a>
                     <Typography className={classes.title} variant="h6" noWrap>
                         VanIT
                     </Typography>
                     <div className={classes.grow} />
                     <div className={classes.sectionDesktop}>
                         {data.map(item => {
-                            return <IconButton key = {item.id}>
-                                <a href = {`#${item.id}`}>{item.title}</a>
-                            </IconButton>;
+                            return <a href = {`#${item.id}`} key = {item.id}>{item.title}</a>;
                         })}
                     </div>
                     <div className={classes.sectionMobile}>
