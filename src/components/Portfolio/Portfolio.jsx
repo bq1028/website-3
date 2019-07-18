@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
 
+import Slider from './Slider';
+
 import './Portfolio.scss';
 
 class Portfolio extends Component {
     render () {
         return (
             <div className='portfolio' id = 'portfolio'>
-                <h1>Portfolio</h1>
+                <h3>Works completed by our team</h3>
+                <Slider />
             </div>      
         );
     }
