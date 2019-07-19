@@ -32,32 +32,13 @@
         -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, #0007);
     }
       
-    #drag-container p {
-        font-family: Serif;
-        position: absolute;
-        top: 100%;
-        left: 50%;
-        transform: translate(-50%,-50%) rotateX(90deg);
-        color: #fff;
-    }
-      
-    #ground {
-        width: 900px;
-        height: 900px;
-        position: absolute;
-        top: 100%;
-        left: 50%;
-        transform: translate(-50%,-50%) rotateX(90deg);
-        background: -webkit-radial-gradient(center center, farthest-side , #9993, transparent);
-    }
-      
     #carousel-container {
         width: 100%;
         height: 100%;
     }
 }
 
-@keyframes spinRevert {
+@keyframes spin {
     from {
         transform: rotateY(360deg);
     } to {
@@ -65,18 +46,24 @@
     }
 }
 
-@media screen and (max-width: 676px) {
+@media screen and (max-width: 925px) {
     .services {
-        height: 130vh;
-    }
+        height: 120vh;
 
-    #drag-container, #spin-container {
-        transform: rotateX(0deg)!important;
-        padding-top: 1.5em!important;
+        #drag-container, #spin-container {
+            // transform: rotateX(0deg)!important;
+            padding-top: 3em!important;
+        }
+    
+        #drag-container img {
+            width: 50px !important;
+            height: 100px !important;
+        }
     }
+}
 
-    #drag-container img {
-        width: 50px !important;
-        height: 100px !important;
+@media screen and (max-width: 675px) {
+    .services {
+        height: 100vh;
     }
 }

@@ -19,3 +19,9 @@
         line-height: 30px;
     }
 }
+
+@media screen and (max-width: 676px) {
+    .sectionTitle {
+        width: 90%;
+    }
+}

@@ -33,7 +33,6 @@ class Slider extends Component {
         rotateSpeed: -60,
         imgWidth: 70,
         imgHeight: 120,
-        animationName: 'spinRevert',
         playState: 'running',
         tX: 0,
         tY: 10
@@ -44,20 +43,22 @@ class Slider extends Component {
             imgHeight,
             imgWidth,
             radius,
-            animationName,
             rotateSpeed,
             playState
         } = this.state;
         return (
             <div
-                id='drag-container'          
+                id='drag-container'
+                style={{
+                    width: `90%`
+                }}
             >
                 <div
                     id='spin-container'
                     style={{
-                        width: `${imgWidth}px`,
-                        height: `${imgHeight}px`,
-                        animation: `${animationName} ${Math.abs(rotateSpeed)}s infinite linear`,
+                        width: `${100}px`,
+                        height: `${100}px`,
+                        animation: `spin ${Math.abs(rotateSpeed)}s infinite linear`,
                         animationPlayState: playState
                     }}
                 >
@@ -76,13 +77,6 @@ class Slider extends Component {
                         />
                     )}
                 </div>
-                <div
-                    id='ground'
-                    style={{
-                        width: `${radius * 3}px`,
-                        height: `${radius * 3}px`
-                    }}
-                ></div>
             </div>
         );
     }
