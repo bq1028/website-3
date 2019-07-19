@@ -28,6 +28,7 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 export default function PrimarySearchAppBar () {
+    const [scrollClass, setScrollClass] = React.useState(false);
     const data = [
         {
             id: 'home',
@@ -77,9 +78,18 @@ export default function PrimarySearchAppBar () {
             })}
         </Menu>
     );
+    window.onscroll = () => scrollFunction();
+    const scrollFunction = () => {
+        let scroll;
+        if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) 
+            scroll = true;
+        else 
+            scroll = false;
+        setScrollClass(scroll);
+    };
     return (
         <div className={`navigation ${classes.grow}`}>
-            <AppBar position="static">
+            <AppBar position="static" className = {`navigation--${scrollClass ? 'scroll' : 'top'}`}>
                 <Toolbar>
                     <a href="#home">
                         <img src='./VanIT.png' alt='aaaaa' style = { { width: '80px', height: '50px' } }></img>
