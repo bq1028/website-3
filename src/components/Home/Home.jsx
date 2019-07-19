@@ -14,6 +14,7 @@ class Home extends Component {
                 <SectionTitle 
                     title = "Home"
                     text = 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem vero quae at consequatur labore ullam minus magni omnis dolorem ut sed corrupti doloribus dolorum et quidem repudiandae soluta, deserunt facilis.'
+                    color = 'white'
                 />
             </div>
             </>

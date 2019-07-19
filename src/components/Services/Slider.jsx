@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import './Services.scss';
+import './Slider.scss';
 
 const images = [
     'https://images.pexels.com/photos/206395/pexels-photo-206395.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
@@ -31,14 +31,14 @@ class Slider extends Component {
         radius: images.length < 10 ? 120 : images.length * 12,
         autoRotate: true,
         rotateSpeed: -60,
-        imgWidth: 70,
+        imgWidth: 100 / images.length,
         imgHeight: 120,
         playState: 'running',
         tX: 0,
         tY: 10
     }
     
-    render() {
+    render () {
         const {
             imgHeight,
             imgWidth,
@@ -49,17 +49,13 @@ class Slider extends Component {
         return (
             <div
                 id='drag-container'
-                style={{
-                    width: `90%`
-                }}
             >
                 <div
                     id='spin-container'
                     style={{
-                        width: `${100}px`,
-                        height: `${100}px`,
                         animation: `spin ${Math.abs(rotateSpeed)}s infinite linear`,
-                        animationPlayState: playState
+                        animationPlayState: playState,
+                        width: `${imgWidth}%`
                     }}
                 >
                     { images.map((item, i) => 
@@ -68,7 +64,6 @@ class Slider extends Component {
                             src={item}
                             alt=''
                             style={{
-                                width: `${imgWidth}px`,
                                 height: `${imgHeight}px`,
                                 transform: `rotateY(${i * (360 / images.length)}deg) translateZ(${radius}px)`,
                                 transition: `transform 1s`,

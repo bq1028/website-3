@@ -4,9 +4,9 @@ import './SectionTitle.scss';
 
 class SectionTitle extends Component {
     render () {
-        const { title, text } = this.props;
+        const { title, text, color } = this.props;
         return (
-            <div className = 'sectionTitle'>
+            <div className = 'sectionTitle' style = { { color: color || 'black' } }>
                 <h1>{title}</h1>
                 <div></div>
                 <p>{text}</p>
