@@ -1,9 +1,52 @@
 .footer{
-    height: 160px;
+    // height: 160px;
     background-color: slateblue;
 
-    h1{
+    &--social {
+        ul {
+            padding: 0;
+            display: flex;
+            justify-content: space-evenly;
+            margin-block-end: 0;
+        }
+
+        ul li {
+            list-style: none;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        ul li svg {
+            height: 40px;
+        }
+    }
+
+    &--contacts {
+        display: flex;
+        justify-content: space-around;
+        padding: 10px 0 0;
+
+        ul {
+            padding: 20px 0 0;
+        }
+
+        ul li {
+            list-style: none;
+            padding: 5px 0 0;
+        }
+    }
+
+    &--copyright {
+        p {
+            text-align: center;
+        }
+    }
+}
+
+@media screen and (max-width : 576px){
+    .footer--contacts ul {
         text-align: center;
-        padding: 50px 0;
     }
 }
