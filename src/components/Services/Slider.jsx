@@ -30,6 +30,20 @@ class Slider extends Component {
         tX: 0,
         tY: 10
     }
+
+    componentDidMount() {
+        window.addEventListener('resize', this.updateDimensions);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('resize');
+    }
+
+    updateDimensions = () => {
+        this.setState({
+            radius: window.innerWidth / images.length * 5
+        });
+      }
     
     render () {
         const {
