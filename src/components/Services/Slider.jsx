@@ -3,35 +3,28 @@ import React, { Component } from 'react';
 import './Slider.scss';
 
 const images = [
-    'https://images.pexels.com/photos/206395/pexels-photo-206395.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-    'https://images.pexels.com/photos/1391498/pexels-photo-1391498.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-    'https://images.pexels.com/photos/1382731/pexels-photo-1382731.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-    'https://images.pexels.com/photos/1758144/pexels-photo-1758144.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-    'https://images.pexels.com/photos/1382734/pexels-photo-1382734.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-    'https://images.pexels.com/photos/1462636/pexels-photo-1462636.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-    'https://images.pexels.com/photos/139829/pexels-photo-139829.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-    'https://images.pexels.com/photos/206395/pexels-photo-206395.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-    'https://images.pexels.com/photos/1391498/pexels-photo-1391498.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-    'https://images.pexels.com/photos/1382731/pexels-photo-1382731.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-    'https://images.pexels.com/photos/1758144/pexels-photo-1758144.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-    'https://images.pexels.com/photos/1382734/pexels-photo-1382734.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-    'https://images.pexels.com/photos/1462636/pexels-photo-1462636.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-    'https://images.pexels.com/photos/139829/pexels-photo-139829.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-    'https://images.pexels.com/photos/206395/pexels-photo-206395.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-    'https://images.pexels.com/photos/1391498/pexels-photo-1391498.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-    'https://images.pexels.com/photos/1382731/pexels-photo-1382731.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-    'https://images.pexels.com/photos/1758144/pexels-photo-1758144.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-    'https://images.pexels.com/photos/1382734/pexels-photo-1382734.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-    'https://images.pexels.com/photos/1462636/pexels-photo-1462636.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-    'https://images.pexels.com/photos/139829/pexels-photo-139829.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
+    'images/services/c.png',
+    'images/services/cpp.png',
+    'images/services/qt-qml.png',
+    'images/services/fluter.png',
+    'images/services/dart.png',
+    'images/services/html.png',
+    'images/services/css.png',
+    'images/services/bootstrap.png',
+    'images/services/javascript.png',
+    'images/services/reactjs.png',
+    'images/services/electronjs.png',
+    'images/services/nodejs.png',
+    'images/services/mongodb.png',
+    'images/services/sql.png'
 ];
 
 class Slider extends Component {
     state = {
-        radius: images.length < 10 ? 120 : images.length * 12,
+        radius: window.innerWidth / images.length * 5,
         autoRotate: true,
         rotateSpeed: -60,
-        imgWidth: 100 / images.length,
+        imgWidth: 70,
         imgHeight: 120,
         playState: 'running',
         tX: 0,
@@ -55,7 +48,7 @@ class Slider extends Component {
                     style={{
                         animation: `spin ${Math.abs(rotateSpeed)}s infinite linear`,
                         animationPlayState: playState,
-                        width: `${imgWidth}%`
+                        width: `${imgWidth}px`
                     }}
                 >
                     { images.map((item, i) => 
@@ -64,6 +57,7 @@ class Slider extends Component {
                             src={item}
                             alt=''
                             style={{
+                                width: `${imgWidth}px`,
                                 height: `${imgHeight}px`,
                                 transform: `rotateY(${i * (360 / images.length)}deg) translateZ(${radius}px)`,
                                 transition: `transform 1s`,
