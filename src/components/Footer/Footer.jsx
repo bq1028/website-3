@@ -54,7 +54,8 @@ class Footer extends Component {
                             </li>
                         </ul>
                     </Grid>
-                    <Grid item lg={4} xs={12} className = 'footer--copyright'>
+                    <Grid item lg={12} xs={12} className = 'footer--copyright'>
+                        <div className='footer--copyright--line'></div>
                         <p>VanIT Inc. All rights reserved. 2019</p>
                     </Grid>
                 </Grid>
