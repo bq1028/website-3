@@ -71,6 +71,9 @@ export default function PrimarySearchAppBar () {
             open={isMobileMenuOpen}
             onClose={handleMobileMenuClose}
         >   
+            <MenuItem className = 'disabled-item' selected = {true} onClick = {handleMobileMenuClose}>
+                <div></div>
+            </MenuItem>;
             {data.map(item => {
                 return <MenuItem key = {item.id}>
                     <a className="hiddenItems" onClick = {handleMobileMenuClose} href = {`#${item.id}`}>{item.title}</a>

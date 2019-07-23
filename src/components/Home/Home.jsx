@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 import PrimarySearchAppBar from './../Navbar/Navbar';
-import SectionTitle from './../SectionTitle/SectionTitle';
 
 import './Home.scss';
 
@@ -11,11 +10,10 @@ class Home extends Component {
             <>
             <PrimarySearchAppBar />
             <div className="home" id = 'home'>
-                <SectionTitle 
-                    title = "Home"
-                    text = 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem vero quae at consequatur labore ullam minus magni omnis dolorem ut sed corrupti doloribus dolorum et quidem repudiandae soluta, deserunt facilis.'
-                    color = 'white'
-                />
+                <h1>We make IT happen</h1>
+                <div className = 'pulse'>
+                    <a href = '#portfolio'><i class="pulse--icon fa fa-angle-double-down"></i></a>
+                </div>
             </div>
             </>
         );

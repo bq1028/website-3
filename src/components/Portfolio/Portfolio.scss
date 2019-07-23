@@ -1,14 +1,21 @@
 .portfolio {
     padding-top: 2em;
-    background-color: rgba(255, 255, 255, .7);
+    background-color: #DBF5F8;
     
     .image-gallery {
         margin: auto;
-        width: 80%;
+        width: 70%;
+        padding: 50px 0; 
     }
 
     .image-gallery-description {
         word-break: break-all;
+    }
+
+    .image-gallery-slide .image-gallery-description {
+        width: 100%;
+        bottom: 30px!important;
+        text-align: center;
     }
 }
 
