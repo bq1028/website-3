@@ -1,6 +1,9 @@
 .footer{ 
-    background-color: #71959A;
+    background-color: teal;
     
+    >div{
+        justify-content: space-between;
+    }
     &--social {
         ul {
             padding: 0;

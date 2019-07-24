@@ -11,17 +11,21 @@
         font-weight: 900;
 
         &:hover{
-            color: rgb(0, 78, 99);
+            color: #71959A;
         }
     }
 
     &--scroll{
-        background-color: #71959A!important;
+        background-color: teal!important;
         box-shadow: 0 1px 0 rgba(0,0,0,.08);
         transition: all .25s ease-in-out!important;
 
         a{
             color: #F0FBFC;
+
+            &:hover{
+                color: #80CBC4;
+            }
         }
     }
 
@@ -41,7 +45,7 @@
     
     div{
         width: 100%;
-        background-color: #7c888d;
+        background-color: #DBF5F8;
         position: absolute;
         height: 2px;
         bottom: 0;
@@ -64,7 +68,9 @@
     padding: 10px 16px;
     font-size: 17 px!important;
 }
-
 .MuiList-root{
-    background-color: rgba(2, 27, 37, 1);
+   background-color: rgba(2, 27, 37, 1); 
+}
+.MuiList-root{
+    background-color: #005661;
 }
