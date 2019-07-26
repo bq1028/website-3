@@ -95,7 +95,8 @@ export default function PrimarySearchAppBar () {
             <AppBar position="static" className = {`navigation--${scrollClass ? 'scroll' : 'top'}`}>
                 <Toolbar>
                     <a href="#home">
-                        <img src='./VanIT.png' alt='aaaaa' style = { { width: '80px', height: '50px' } }></img>
+                        {/* <img src='./VanIT.png' alt='aaaaa' style = { { width: '80px', height: '50px' } }></img> */}
+                        <span className = 'logo'><span >V</span>anIT</span>
                     </a>
                     {/* <Typography className={classes.title} variant="h6" noWrap>
                         VanIT

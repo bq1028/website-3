@@ -1,21 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poiret+One&display=swap');
 .home {
     position: relative;
     height: 80vh;
     text-align: center;
     padding-top: 20vh;
-    background-image: url(./a3.jpg);
+    background-image: url(/images/home/home.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     min-height: 416px;
 
     h1{
-        font-size: 3em;
+        font-size: 3.5em;
+        font-family: 'Poiret One', cursive;
     }
 
 
     .line{
-        width: 30%;
+        width: 20%;
         margin: auto;
         background-color: #fff;
         height: 2px;
