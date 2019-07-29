@@ -6,12 +6,20 @@ import PaginationImgs from './PaginationImgs';
 
 import Grid from '@material-ui/core/Grid';
 
-import './image-gallery-styles/image-gallery.scss';
-import './image-gallery-styles/image-gallery-no-icon.scss';
-
 import './Portfolio.scss';
 
 class Portfolio extends Component {
+    constructor (props) {
+        super(props);
+        this.state = { 
+            offset: 0,
+            pageItems: window.innerWidth > 800 ? 6 : 3
+        };
+    }
+ 
+    handleClick = offset => {
+        this.setState({ offset });
+    }
     render () {
         const images = [
             {
@@ -46,10 +54,15 @@ class Portfolio extends Component {
             },
             {
                 original: '/images/portfolio/11.jpg'
+            },
+            {
+                original: '/images/portfolio/12.jpg'
             }
         ];
-        const pageItems = 9;
+        const { offset, pageItems } = this.state;
         const maxPage = Math.ceil(images.length / pageItems);
+        const mapStart = offset * pageItems;
+        const mapEnd = mapStart + pageItems;
         return (
             <div className='portfolio' id = 'portfolio'>
                 <SectionTitle 
@@ -58,11 +71,15 @@ class Portfolio extends Component {
                     color = '#476569'
                 />
                 <Grid container className = 'portfolio--images'>
-                    {images.map(item => {
+                    {images.slice(mapStart, mapEnd).map(item => {
                         return <PortfolioItem key = {item.original} imgSrc = {item.original} imgAlt = {item.original} images = {images}/>;
                     })}
                 </Grid>
-                <PaginationImgs maxPage = {maxPage} />
+                <PaginationImgs 
+                    maxPage = {maxPage} 
+                    offset = {offset} 
+                    handleClick = {this.handleClick}
+                />
             </div>      
         );
     }

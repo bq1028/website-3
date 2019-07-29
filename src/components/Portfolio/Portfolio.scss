@@ -4,7 +4,8 @@
     &--images{
         width: 90%!important;
         margin: auto!important;
-
+        min-height: 540px;
+        
         &:hover{
             .portfolio--images--item{
                 opacity: .4;
@@ -14,6 +15,10 @@
                 -webkit-transform: scale(.95);
                 transform: scale(.95);
             }
+        }
+
+        .MuiGrid-item{
+            max-height: 250px;
         }
 
         &--item{
@@ -83,7 +88,32 @@
     background: transparent!important;
 }
 .MuiDialogContent-root{
-    overflow-y: hidden!important;
+    text-align: center;
+    padding: 0!important;
+    
+        /* width */
+    &::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+    }
+    
+    /* Track */
+    &::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px grey; 
+        border-radius: 10px;
+    }
+    
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+        background: rgb(71, 101, 105); 
+        border-radius: 10px;
+    }
+    
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+        background: rgba(71, 101, 105, .5);
+        cursor: pointer!important;  
+    }
 }
 
 .Component-closeButton-217 {
@@ -92,13 +122,18 @@
 .MuiDialogContent-dividers{
     border-top: none!important;
 }
-.image-gallery-content{
-    cursor: pointer;
-}
 .MuiPaper-elevation24{
     box-shadow: none!important;
 }
-.image-gallery {
-    width: 80%;
-    margin: auto;
+
+.MuiFlatPagination-root{
+    text-align: center;
+    font-size: 1.1em!important;
+}
+.MuiButton-textSecondary{
+    color: #80CBC4!important;
+    font-size: 1.5em!important;
+}
+.MuiButton-textPrimary {
+    color: rgb(71, 101, 105)!important;
 }

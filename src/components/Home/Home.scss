@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Poiret+One&display=swap');
 .home {
     position: relative;
-    height: 80vh;
+    height: 100vh;
     text-align: center;
     padding-top: 20vh;
     background-image: url(/images/home/home.jpg);
@@ -62,9 +62,3 @@
         @keyframes pulse {to {box-shadow: 0 20px 30px 20px rgba(219, 245, 248, 0);}}
     }
 }
-
-// @media screen and (max-width: 800px) {
-//     .home .pulse{
-//         bottom: 0;
-//     }
-// }
