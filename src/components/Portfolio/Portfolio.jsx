@@ -16,10 +16,26 @@ class Portfolio extends Component {
             pageItems: window.innerWidth > 800 ? 6 : 3
         };
     }
+
+    componentDidMount () {
+        window.addEventListener('resize', this.updatePageItems);
+    }
+
+    componentWillUnmount () {
+        window.removeEventListener('resize');
+    }
  
     handleClick = offset => {
         this.setState({ offset });
     }
+
+    updatePageItems = () => {
+        this.setState({
+            offset: 0,
+            pageItems: window.innerWidth > 800 ? 6 : 3
+        });
+    };
+
     render () {
         const images = [
             {

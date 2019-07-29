@@ -6,6 +6,8 @@ const images = [
     'images/services/c.png',
     'images/services/cpp.png',
     'images/services/qt-qml.png',
+    'images/services/ios.png',
+    'images/services/android.png',
     'images/services/fluter.png',
     'images/services/dart.png',
     'images/services/html.png',
@@ -16,12 +18,13 @@ const images = [
     'images/services/electronjs.png',
     'images/services/nodejs.png',
     'images/services/mongodb.png',
-    'images/services/sql.png'
+    'images/services/sql.png',
+    'images/services/blockchain.png'
 ];
 
 class Slider extends Component {
     state = {
-        radius: window.innerWidth / images.length * 5,
+        radius: window.innerWidth < 500 ? window.innerWidth / images.length * 7 : window.innerWidth / images.length * 5,
         autoRotate: true,
         rotateSpeed: -60,
         imgWidth: 70,
@@ -41,7 +44,7 @@ class Slider extends Component {
 
     updateDimensions = () => {
         this.setState({
-            radius: window.innerWidth / images.length * 5
+            radius: window.innerWidth < 500 ? window.innerWidth / images.length * 7 : window.innerWidth / images.length * 5
         });
     };
     
