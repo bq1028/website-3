@@ -50,6 +50,10 @@ export default function PrimarySearchAppBar () {
     const classes = useStyles();
     const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
+    const [prevScroll, setPrevScroll] = React.useState(document.documentElement.scrollTop);
+    const [scrollDawn, setScrollDawn] = React.useState(false);
+
+
     const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
     function handleMobileMenuClose () {
@@ -81,6 +85,22 @@ export default function PrimarySearchAppBar () {
             })}
         </Menu>
     );
+    const headerHideOnscrolDawn = () => {
+        // let prevScroll = document.documentElement.scrollTop || window.scrollY || document.scrollTop;
+        // console.log(document.documentElement.scrollTop , prevScroll);
+        if (document.documentElement.scrollTop > 450){
+            if (document.documentElement.scrollTop > prevScroll) {
+                setScrollDawn(true);
+            }
+            else{
+                setScrollDawn(false);
+            }
+        } else {
+            setScrollDawn(false);
+        }
+        setPrevScroll(document.documentElement.scrollTop)
+
+    }
     window.onscroll = () => scrollFunction();
     const scrollFunction = () => {
         let scroll;
@@ -89,10 +109,11 @@ export default function PrimarySearchAppBar () {
         else 
             scroll = false;
         setScrollClass(scroll);
+        headerHideOnscrolDawn();
     };
     return (
         <div className={`navigation ${classes.grow}`}>
-            <AppBar position="static" className = {`navigation--${scrollClass ? 'scroll' : 'top'}`}>
+            <AppBar position="static" className = {`navigation--${scrollClass ? 'scroll' : 'top'} ${scrollDawn ? 'hideHerder' : ''}`}>
                 <Toolbar>
                     <a href="#home">
                         {/* <img src='./VanIT.png' alt='aaaaa' style = { { width: '80px', height: '50px' } }></img> */}
