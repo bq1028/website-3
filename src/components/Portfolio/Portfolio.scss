@@ -1,5 +1,6 @@
 .portfolio {
-    background-color: #ffffff;
+    background-color: #D0E6E4;
+    padding-bottom: 100px;
 
     &--images{
         width: 90%!important;
@@ -75,9 +76,6 @@
         }
     }
 }
-.MuiDialog-container{
-    cursor: zoom-out;
-}
 .MuiDialog-paperWidthSm{
     max-width: none!important;
     width: 100%;
@@ -89,9 +87,11 @@
 }
 .MuiDialogContent-root{
     text-align: center;
+    margin: auto;
+    width: 80%;
     padding: 0!important;
     
-        /* width */
+    /* width */
     &::-webkit-scrollbar {
         width: 10px;
         height: 10px;
@@ -114,6 +114,11 @@
         background: rgba(71, 101, 105, .5);
         cursor: pointer!important;  
     }
+
+    img{
+        width: 100%;
+        cursor: zoom-out;
+    }
 }
 
 .Component-closeButton-217 {
@@ -131,9 +136,18 @@
     font-size: 1.1em!important;
 }
 .MuiButton-textSecondary{
-    color: #80CBC4!important;
+    color: #178578!important;
     font-size: 1.5em!important;
 }
 .MuiButton-textPrimary {
     color: rgb(71, 101, 105)!important;
+}
+
+@media screen and (max-width: 800px) {
+    .MuiDialogContent-root{
+        width: 90%;
+    }
+    .MuiDialog-paper{
+        margin: 0 auto!important;
+    }
 }

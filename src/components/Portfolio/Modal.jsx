@@ -36,7 +36,7 @@ class CustomizedDialogs extends React.Component {
                 >
                     <DialogContent dividers onClick={this.handleClose}>
                         {/* <Slider images = {images}/> */}
-                        <img src = {imgSrc} width = '80%' alt = 'zoom'/>
+                        <img src = {imgSrc} alt = 'zoom'/>
                     </DialogContent>
                 </Dialog>
             </>

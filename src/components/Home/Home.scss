@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Poiret+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=DM+Serif+Display&display=swap');
 .home {
     position: relative;
     height: 100vh;
@@ -8,12 +8,18 @@
     background-image: url(/images/home/home.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
-    min-height: 416px;
+    background-position: 50%;
+    //background-repeat: repeat-y;
+    //background-position: 50% -100px;
+    //min-height: 416px;
+
+    div{
+        //transition: all .s ease-in-out
+    }
 
     h1{
-        font-size: 3.5em;
-        font-family: 'Poiret One', cursive;
+        font-size: 4.5em;
+        font-family: 'DM Serif Display', serif;
     }
 
 
@@ -33,7 +39,7 @@
         a{
             display: block;
             :hover{
-                color: #26A69A;
+                color: #178578;
                 box-shadow: 0 7px 10px 0 rgba(38, 166, 154, 0.7);
             }
         }

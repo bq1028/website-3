@@ -13,7 +13,7 @@ class Portfolio extends Component {
         super(props);
         this.state = { 
             offset: 0,
-            pageItems: window.innerWidth > 800 ? 6 : 3
+            pageItems: window.innerWidth > 1279 ? 6 : 4
         };
     }
 
@@ -32,7 +32,7 @@ class Portfolio extends Component {
     updatePageItems = () => {
         this.setState({
             offset: 0,
-            pageItems: window.innerWidth > 800 ? 6 : 3
+            pageItems: window.innerWidth > 1279 ? 6 : 4
         });
     };
 
@@ -91,11 +91,11 @@ class Portfolio extends Component {
                         return <PortfolioItem key = {item.original} imgSrc = {item.original} imgAlt = {item.original} images = {images}/>;
                     })}
                 </Grid>
-                <PaginationImgs 
+                {images.length > pageItems && <PaginationImgs 
                     maxPage = {maxPage} 
                     offset = {offset} 
                     handleClick = {this.handleClick}
-                />
+                />}
             </div>      
         );
     }

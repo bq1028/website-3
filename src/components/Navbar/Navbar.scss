@@ -16,9 +16,9 @@
     }
 
     &--scroll{
-        background-color: teal!important;
+        background-color: #178578!important;
         box-shadow: 0 1px 0 rgba(0,0,0,.08);
-        transition: all .3s ease!important;
+        transition: all .6s ease!important;
 
         a{
             color: #F0FBFC;
@@ -31,7 +31,7 @@
 
     &--top{
         background-color: transparent!important;
-        transition: all .25s ease-in-out!important;
+        transition: all .6s ease-in-out!important;
 
         a{
             color: #DBF5F8;
@@ -86,5 +86,5 @@
 
 
 .hideHerder {
-    margin-top: -70px;
+    margin-top: -80px;
 }

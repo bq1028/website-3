@@ -53,7 +53,6 @@ export default function PrimarySearchAppBar () {
     const [prevScroll, setPrevScroll] = React.useState(document.documentElement.scrollTop);
     const [scrollDawn, setScrollDawn] = React.useState(false);
 
-
     const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
     function handleMobileMenuClose () {
@@ -86,21 +85,15 @@ export default function PrimarySearchAppBar () {
         </Menu>
     );
     const headerHideOnscrolDawn = () => {
-        // let prevScroll = document.documentElement.scrollTop || window.scrollY || document.scrollTop;
-        // console.log(document.documentElement.scrollTop , prevScroll);
-        if (document.documentElement.scrollTop > 450){
-            if (document.documentElement.scrollTop > prevScroll) {
+        if (document.documentElement.scrollTop > 100)
+            if (document.documentElement.scrollTop > prevScroll) 
                 setScrollDawn(true);
-            }
-            else{
+            else
                 setScrollDawn(false);
-            }
-        } else {
+        else 
             setScrollDawn(false);
-        }
-        setPrevScroll(document.documentElement.scrollTop)
-
-    }
+        setPrevScroll(document.documentElement.scrollTop);
+    };
     window.onscroll = () => scrollFunction();
     const scrollFunction = () => {
         let scroll;
