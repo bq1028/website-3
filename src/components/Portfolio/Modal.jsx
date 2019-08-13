@@ -1,5 +1,7 @@
 import React from 'react';
 
+import propTypes from 'prop-types';
+
 import { withStyles } from '@material-ui/core/styles';
 import Dialog from '@material-ui/core/Dialog';
 import MuiDialogContent from '@material-ui/core/DialogContent';
@@ -26,22 +28,25 @@ class CustomizedDialogs extends React.Component {
     };
 
     render () {
-        const { imgSrc } = this.props;
+        const { imgSrc, imgAlt } = this.props;
         return (
             <>
-                <a href='#aa' variant="outlined" onClick={this.handleClickOpen}><i className="material-icons">zoom_out_map</i></a>
+                <a href='#zoom' variant="outlined" onClick={this.handleClickOpen}><i className="material-icons">zoom_out_map</i></a>
                 <Dialog
                     onClose={this.handleClose}
                     open={this.state.open}
                 >
                     <DialogContent dividers onClick={this.handleClose}>
-                        {/* <Slider images = {images}/> */}
-                        <img src = {imgSrc} alt = 'zoom'/>
+                        <img src = {imgSrc} alt = {imgAlt}/>
                     </DialogContent>
                 </Dialog>
             </>
         );
     }
 }
+CustomizedDialogs.propTypes = {
+    imgSrc: propTypes.string.isRequired,
+    imgAlt: propTypes.string.isRequired
+};
 
 export default CustomizedDialogs;
