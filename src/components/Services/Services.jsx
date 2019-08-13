@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import Grid from '@material-ui/core/Grid';
 
-import SectionTitle from './../SectionTitle/SectionTitle';
+import SectionTitle from '../SectionTitle';
 
 import data from './data';
 

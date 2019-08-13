@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import SectionTitle from './../SectionTitle/SectionTitle';
+import SectionTitle from '../SectionTitle';
 import PortfolioItem from './PortfolioItem';
 import PaginationImgs from './PaginationImgs';
 
