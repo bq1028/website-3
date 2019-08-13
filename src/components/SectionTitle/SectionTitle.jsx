@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import propTypes from 'prop-types';
 
 import './SectionTitle.scss';
 
@@ -14,5 +15,11 @@ class SectionTitle extends Component {
         );
     }
 }
+
+SectionTitle.propTypes = {
+    title: propTypes.string.isRequired,
+    text: propTypes.string,
+    color: propTypes.string
+};
 
 export default SectionTitle;

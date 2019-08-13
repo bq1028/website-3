@@ -1,4 +1,7 @@
 import React from 'react';
+
+import propTypes from 'prop-types';
+
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
 import Pagination from 'material-ui-flat-pagination';
@@ -21,4 +24,11 @@ class PaginationImgs extends React.Component {
         );
     }
 }
+
+PaginationImgs.propTypes = {
+    maxPage: propTypes.number.isRequired,
+    offset: propTypes.number.isRequired,
+    handleClick: propTypes.func.isRequired
+};
+
 export default PaginationImgs;

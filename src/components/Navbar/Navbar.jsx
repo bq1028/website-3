@@ -1,12 +1,14 @@
 import React from 'react';
+
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
-// import Typography from '@material-ui/core/Typography';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import MoreIcon from '@material-ui/icons/MoreVert';
+
+import data from './data';
 
 import './Navbar.scss';
 
@@ -29,24 +31,6 @@ const useStyles = makeStyles(theme => ({
 }));
 export default function PrimarySearchAppBar () {
     const [scrollClass, setScrollClass] = React.useState(false);
-    const data = [
-        {
-            id: 'home',
-            title: 'Home'
-        },
-        {
-            id: 'portfolio',
-            title: 'Portfolio'
-        },
-        {
-            id: 'services',
-            title: 'Services'
-        },
-        {
-            id: 'contactUs',
-            title: 'Contact Us'
-        }
-    ];
     const classes = useStyles();
     const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
@@ -108,13 +92,9 @@ export default function PrimarySearchAppBar () {
         <div className={`navigation ${classes.grow}`}>
             <AppBar position="static" className = {`navigation--${scrollClass ? 'scroll' : 'top'} ${scrollDawn ? 'hideHerder' : ''}`}>
                 <Toolbar>
-                    <a href="#home">
-                        {/* <img src='./VanIT.png' alt='aaaaa' style = { { width: '80px', height: '50px' } }></img> */}
+                    <a href="#home" className='navigation--logo'>
                         <span className = 'logo'><span >V</span>anIT</span>
                     </a>
-                    {/* <Typography className={classes.title} variant="h6" noWrap>
-                        VanIT
-                    </Typography> */}
                     <div className={classes.grow} />
                     <div className={classes.sectionDesktop}>
                         {data.map(item => {

@@ -37,6 +37,12 @@
             color: #DBF5F8;
         }
     }
+
+    &--logo{
+        &:hover{
+            color: #DBF5F8!important;
+        }
+    }
 }
 .logo{
     font-size: 1.3em;
@@ -77,13 +83,10 @@
     font-size: 1.5em px!important;
     font-family: 'Indie Flower', cursive;
 }
-.MuiList-root{
-   background-color: rgba(2, 27, 37, 1); 
-}
+
 .MuiList-root{
     background-color: #005661;
 }
-
 
 .hideHerder {
     margin-top: -80px;
