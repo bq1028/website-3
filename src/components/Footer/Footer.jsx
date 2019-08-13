@@ -22,7 +22,7 @@ class Footer extends Component {
                         <h2>Follow us on</h2>
                         <ul>
                             <li>
-                                <a href = {`${data.facebook}`} target='_blank'>
+                                <a href = {`${data.facebook}`} target='blank'>
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         x="0"
@@ -37,7 +37,7 @@ class Footer extends Component {
                                 </a>
                             </li>
                             <li>
-                                <a href = {`${data.twitter}`} target='_blank'>
+                                <a href = {`${data.twitter}`} target='blank'>
                                     <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path  d="M243.196,0C108.891,0,0,108.891,0,243.196s108.891,243.196,243.196,243.196
                                         s243.196-108.891,243.196-243.196C486.392,108.861,377.501,0,243.196,0z M364.186,188.598l0.182,7.752
                                         c0,79.16-60.221,170.359-170.359,170.359c-33.804,0-65.268-9.91-91.776-26.904c4.682,0.547,9.454,0.851,14.288,0.851
@@ -50,7 +50,7 @@ class Footer extends Component {
                                 </a>
                             </li>
                             <li>
-                                <a href = {`${data.github}`} target='_blank'>
+                                <a href = {`${data.github}`} target='blank'>
                                     <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M255.968,5.329C114.624,5.329,0,120.401,0,262.353c0,113.536,73.344,209.856,175.104,243.872
                                         c12.8,2.368,17.472-5.568,17.472-12.384c0-6.112-0.224-22.272-0.352-43.712c-71.2,15.52-86.24-34.464-86.24-34.464
                                         c-11.616-29.696-28.416-37.6-28.416-37.6c-23.264-15.936,1.728-15.616,1.728-15.616c25.696,1.824,39.2,26.496,39.2,26.496

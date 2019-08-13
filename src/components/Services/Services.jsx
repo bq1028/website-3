@@ -19,7 +19,7 @@ class Services extends Component {
                 />
                 <Grid container className = 'services--container'>
                     {data.map(item => {
-                        return <Grid item xl={3} lg={3} md={4} sm={4} xs={6}>
+                        return <Grid item xl={3} lg={3} md={4} sm={4} xs={6} key = {item.src}>
                             <div className='services--content'>
                                 <div className='services--logo'>
                                     <img src = {item.src} alt = {item.alt}/>

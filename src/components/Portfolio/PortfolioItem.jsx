@@ -16,7 +16,7 @@ class PortfolioItem extends Component {
                         imgSrc = {imgSrc} 
                         imgAlt = {imgAlt}
                     />
-                    <a href={`#${link}`}><i className="material-icons">link</i></a>
+                    <a href={link} target='blank'><i className="material-icons">link</i></a>
                 </div>
             </Grid>      
         );

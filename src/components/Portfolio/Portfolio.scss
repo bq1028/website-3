@@ -40,8 +40,8 @@
             &--option{
                 display: none;
                 position: absolute;
-                top: 35%;
-                left: 35%;
+                top: calc(50% - 31.5px);
+                left: calc(50% - 48px);
 
                 a{
                     color: #337ab7;
